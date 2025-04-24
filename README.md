@@ -43,10 +43,15 @@ Tools -> General -> Workspace
 ### 패키지 설치
 ```
 install.packages("BiocManager")
+BiocManager::install(c("biomaRt", "DESeq2", "org.Mm.eg.db", "dplyr"))
+
+#이것과 같음
+install.packages("BiocManager")
 BiocManager::install("biomaRt")
 BiocManager::install("DESeq2")
 BiocManager::install("org.Mm.eg.db")
 install.packages("dplyr")
+
 ```
 
 ### 패키지 로드
