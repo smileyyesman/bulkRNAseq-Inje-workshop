@@ -51,6 +51,7 @@ BiocManager::install("biomaRt")
 BiocManager::install("DESeq2")
 BiocManager::install("org.Mm.eg.db")
 install.packages("dplyr")
+install.packages("ggrepel")
 
 ```
 
