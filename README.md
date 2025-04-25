@@ -43,7 +43,7 @@ Tools -> General -> Workspace
 ### 패키지 설치
 ```
 install.packages("BiocManager")
-BiocManager::install(c("biomaRt", "DESeq2", "org.Mm.eg.db", "dplyr"))
+BiocManager::install(c("biomaRt", "DESeq2", "org.Mm.eg.db", "dplyr", "pheatmap"))
 
 #이것과 같음
 install.packages("BiocManager")
@@ -51,7 +51,7 @@ BiocManager::install("biomaRt")
 BiocManager::install("DESeq2")
 BiocManager::install("org.Mm.eg.db")
 install.packages("dplyr")
-install.packages("ggrepel")
+install.packages("pheatmap")
 
 ```
 
@@ -62,6 +62,8 @@ library(dplyr)
 library(ggplot2)
 library(biomaRt)
 library(org.Mm.eg.db)
+library(pheatmap)
+library(tibble)
 ```
 
 
@@ -130,7 +132,7 @@ group <- factor(group, levels = c("Control", "Aroclor1260", "PCB126", "AroPCB"))
 str(group)
 
 #데이터 column 설정, colData 생성
-colData <- data.frame(group = group, row.names = sampleNames)
+colData <- data.frame(group = group, row.names = samples)
 #확인
 colData
 ```
